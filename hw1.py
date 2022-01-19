@@ -6,20 +6,20 @@ def get_data(path):
     return result
 
 
-def analyze_data(list, method):
+def analyze_data(list, methodname):
     number = []
     for i in list:
         for j in i:
             number.append(j)
 
-    if method == "average":
+    if methodname == "average":
         print(sum(number)/ len(number))
 
-    if method == "standard deviation":
+    if methodname == "standard deviation":
         mean = sum(number) / len(number)
         print((sum([(x - mean)**2 for x in number])/len(number))**0.5)
 
-    if method == "covariance":
+    if methodname == "covariance":
         mean_0 = sum(list[0]) / len(list[0])
         mean_1 = sum(list[1]) / len(list[1])
         sub_0 = [i - mean_0 for i in list[0]]
@@ -28,7 +28,7 @@ def analyze_data(list, method):
         denominator = len(list[0])
         print(numerator / denominator)
 
-    if method == "correlation":
+    if methodname == "correlation":
         mean_0 = sum(list[0]) / len(list[0])
         mean_1 = sum(list[1]) / len(list[1])
         sub_0 = [i - mean_0 for i in list[0]]
