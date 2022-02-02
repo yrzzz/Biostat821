@@ -37,4 +37,4 @@ def analyze_data(lists: list, methodname: str) -> float:
         std_0 = sum(sub_0[i]**2 for i in range(len(sub_0)))
         std_1 = sum(sub_1[i]**2 for i in range(len(sub_1)))
         denominator = (std_0*std_1)**0.5
-        print(numerator / denominator)
+        print(numerator / denominator) 
